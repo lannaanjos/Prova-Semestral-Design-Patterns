@@ -52,9 +52,9 @@ public class Lote extends AbsObservado {
         aberto = false;
         vendido = !lances.isEmpty() && lanceAtual >= precoReserva;
         if (vendido){
-            System.out.printf("\n\n>> Lote %s VENDIDO por R$ %.2f.", nome, lanceAtual);
+            System.out.printf("\n\nLote %s VENDIDO por R$ %.2f.", nome, lanceAtual);
         } else {
-            System.out.printf("\n\n>> Lote %s NÃO VENDIDO (maior lance R$ %.2f, reserva R$ %.2f).", nome, lanceAtual, precoReserva);
+            System.out.printf("\n\nLote %s NÃO VENDIDO (maior lance R$ %.2f, reserva R$ %.2f).", nome, lanceAtual, precoReserva);
         }
     }
 
@@ -63,7 +63,7 @@ public class Lote extends AbsObservado {
     }
 
     public void imprimirAcerto(){
-        System.out.printf("\n\n>>> Acerto do vendedor: %s (%s)", nome, categoria);
+        System.out.printf("\n\n>> Acerto do vendedor: %s (%s)", nome, categoria);
         if (!vendido){
             System.out.print("\nLote não vendido: sem comissão");
             return;
@@ -72,7 +72,7 @@ public class Lote extends AbsObservado {
         System.out.printf("\nPreço inicial: R$ %.2f", precoInicial);
         System.out.printf("\nValor de venda: R$ %.2f", lanceAtual);
         System.out.printf("\nComissão (%s): R$ %.2f", regraComissao.descrever(), comissao);
-        System.out.printf("\nValor líquido ao vendedor: R$ %.2f", lanceAtual - comissao);
+        System.out.printf("\nValor líquido ao vendedor: R$ %.2f\n", lanceAtual - comissao);
     }
 
     @Override

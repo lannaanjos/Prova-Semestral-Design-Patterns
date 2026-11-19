@@ -11,7 +11,7 @@ public class Participante extends AbsObservador {
 
     @Override
     public void atualizar(Lote lote, Lance lance){
-        System.out.printf("\n   >> [%s] Novo lance no lote %s: R$ %.2f", nome, lote.getNome(), lance.getValor());
+        System.out.printf("\n> %s: Novo lance no lote %s de R$ %.2f", nome, lote.getNome(), lance.getValor());
     }
 
     public String getNome(){
