@@ -11,7 +11,7 @@ public class Main {
         Thread analytics = new Thread(() ->
             new Provisionador(azure).provisionar(new Solicitacao("Análises", 3, 200)));
         Thread clusterMl = new Thread(() ->
-            new Provisionador(azure).provisionar(new Solicitacao("ML", 32, 1024)));
+            new Provisionador(azure).provisionar(new Solicitacao("ML", 512, (1024*9))));
 
         producao.start();
         homologacao.start();
