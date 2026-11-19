@@ -12,7 +12,7 @@ public class Auditor extends AbsObservador {
     }
 
     public void imprimirRegistros(){
-        System.out.print("\n\n<-= Registros do auditor =->");
+        System.out.print("\n\n<= Registros do auditor =>");
         for (String registro : registros){
             System.out.print("\n" + registro);
         }
